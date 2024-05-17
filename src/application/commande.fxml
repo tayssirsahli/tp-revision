@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RestaurantController">
+   <children>
+      <Label layoutX="107.0" layoutY="14.0" text="Commande Restaurant">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="238.0" endY="6.0" layoutX="268.0" layoutY="75.0" startX="-163.0" startY="6.0" />
+      <Label layoutX="161.0" layoutY="132.0" text="Plat" />
+      <Label layoutX="132.0" layoutY="204.0" text="Quantite" />
+      <Label layoutX="132.0" layoutY="275.0" text="Supplement drink" />
+      <Button fx:id="ajouterID" layoutX="474.0" layoutY="132.0" mnemonicParsing="false" onAction="#ajouterBtn" onMouseClicked="#ajouterBtn" text="Ajouter" />
+      <Button fx:id="supID" layoutX="474.0" layoutY="173.0" mnemonicParsing="false" onAction="#SupBtn" text="Supprimerter" />
+      <Button fx:id="calcId" layoutX="474.0" layoutY="214.0" mnemonicParsing="false" onAction="#CalcBtn" text="Calculer" />
+      <ComboBox fx:id="platCom" layoutX="275.0" layoutY="127.0" prefWidth="150.0" />
+      <TextField fx:id="quantId" layoutX="257.0" layoutY="199.0" />
+      <RadioButton fx:id="SupOUI" layoutX="296.0" layoutY="248.0" mnemonicParsing="false" text="oui">
+         <toggleGroup>
+            <ToggleGroup fx:id="A" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="supNon" layoutX="296.0" layoutY="275.0" mnemonicParsing="false" text="Non" toggleGroup="$A" />
+      <TableView fx:id="tableau" layoutX="15.0" layoutY="317.0" prefHeight="200.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="Tnom" prefWidth="75.0" text="nom Plat" />
+          <TableColumn fx:id="Tquan" prefWidth="75.0" text="quantite" />
+            <TableColumn fx:id="TSupp" prefWidth="116.0" text="Supplement" />
+            <TableColumn fx:id="Tprix" prefWidth="156.0" text="prix unitaire" />
+            <TableColumn fx:id="Tmont" prefWidth="156.0" text="Montant" />
+        </columns>
+      </TableView>
+      <Label layoutX="453.0" layoutY="275.0" text="MMT :" />
+      <TextField fx:id="MMT" layoutX="503.0" layoutY="270.0" prefHeight="31.0" prefWidth="88.0" />
+   </children>
+</Pane>
